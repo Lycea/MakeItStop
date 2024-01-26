@@ -1,5 +1,7 @@
 require("key_handle")
 require("renderer.renderer")
+ui = require("helper.SimpleUi.SimpleUI")
+
 
 require("states.game_states")
 sample_state=require("states.state_sample")
@@ -104,8 +106,8 @@ end
 
 --loading a game
 function game.load() 
-
-
+  game_state = GameStates.PLAYING
+  game.new()
 end 
  
  
@@ -114,85 +116,23 @@ function game.new()
    sample_state:startup()
 end
 
- 
-
 function game.play(dt) 
-
-    
-
-  for key,v in pairs(key_list)do
-      attack   = false
-      movement = {x=0,y=0}
-      
-      --print("got some id",plid)
-      
-        --print(key,v)
-        local action=handle_keys(key)--get key callbacks
-        
-        
-        
-        if action["move"] and game_state==GameStates.PLAYING then
-            movement.x=movement.x+action["move"][1]
-            movement.y=movement.y+action["move"][2]
-        end
-        
-        
-        if action["exit"]  then
-            
-            if exit_timer +0.3 < love.timer.getTime() then
-                love.event.quit()
-            end
-            
-        end
-        
-        
-        if action["attack"] then
-            attack = true
-            
-        end
-      
-  end
- 
   sample_state:update()
-  
-  
-  -- Enemy behaviour basic / Enemy turn
-  
-
 end 
- 
  
 --main loop
 function game.update(dt) 
   
   --handle game stuff
-  if show_main_menue == false then
-    game.play(dt)
-    return
-  end
-  
-  
-  --handle menue
-  update_menue()
-  
-    
+  game.play(dt)
+  ui.update()
 end
 
  
 function game.draw() 
-    if show_main_menue ==true then
-        render_menue()
-        
-        return
-    end
-    
     sample_state:draw()
+    ui.draw()
 end 
- 
- 
- 
- 
---default key list to check
 
 
 function game.keyHandle(key,s,r,pressed_) 
@@ -203,12 +143,10 @@ function game.keyHandle(key,s,r,pressed_)
     key_list[key] = nil
   end
 end 
- 
- 
 
 
 function game.MouseHandle(x,y,btn) 
-   
+
 end 
  
 function game.MouseMoved(mx,my) 

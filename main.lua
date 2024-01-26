@@ -10,13 +10,18 @@ debuger = {
 
 
 class_base= require("helper.classic")
+
+g = require("globals")
+
+gvar = g.vars
+glib = g.libs
+
 console =require("helper.console")
 timer =require("helper.timer")
 
 game =require("game")
 
-
-
+gvar.button_config = {}
 
 
 local maj,min,rev=love.getVersion()
@@ -25,10 +30,9 @@ if maj >= 11 then
 end
 
 
-
-last_axis_1_angle = 0
-last_axis_2_angle = 0
-
+-- function click_start()
+--   print("omg you clicked it D:")
+-- end
 
 function love.load(args)
   
@@ -44,6 +48,9 @@ function love.load(args)
   
   scr_w,scr_h =love.graphics.getDimensions()
   --love.window.setMode(80*tile_size,50*tile_size)
+  ui.init()
+
+
   game.load()
   
   --love.keyboard.setKeyRepeat(true)
@@ -52,8 +59,6 @@ end
 
 function love.update(dt)
   game.update(dt)
-  
-  
 end
 
 function love.draw()
@@ -81,42 +86,4 @@ function love.mousemoved(x,y,dx,dy)
     game.MouseMoved(x,y)
 end
 
-function love.joystickpressed(j,b)
-    b_to_k ={        [1] ="x"
-    }
-    if b_to_k[b]~= nil then
-        print(j,b)
-        game.joy_handle(j,b_to_k[b],true)
-    end
-end
 
-function love.joystickreleased(j,b)
-    b_to_k ={
-        [1] ="x"
-    }
-    if b_to_k[b]~= nil then
-        print(j,b)
-        game.joy_handle(j,b_to_k[b],false)
-    end
-end
-
-
-
-function love.joystickaxis(j,a,v)
-    print("------------------------------")
-    print(j:getName(),a,v)
-    print(j:getAxis(a))
-    --print(j)
-    
-    --print(j.getGamepadAxis(j,2))
-    
-    game.joy_move(j,a,v)
-    
-
-end
-
-
-function love.resize(w,h)
-        scr_h=h
-        scr_w=w
-end
