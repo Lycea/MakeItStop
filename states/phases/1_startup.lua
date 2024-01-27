@@ -25,6 +25,8 @@ function phase:new()
 end
 
 function phase:startup()
+
+  print("sizes:", scr_w, scr_h)
   big_font = love.graphics.newFont(22)
   default_font = love.graphics.getFont()
 
@@ -36,10 +38,9 @@ function phase:startup()
 
   for id in pairs(btns) do
     glib.ui.SetSpecialCallback(id, start_click)
-    glib.ui.SetSpecialCallback(id, hover ,"onHover")
+    glib.ui.SetSpecialCallback(id, hover, "onHover")
   end
 end
-
 
 local num = 0
 local num_change = 0.3
@@ -55,7 +56,6 @@ function phase:draw()
   love.graphics.print("Push button", scr_w / 2 , 0)
   love.graphics.print("   to start", scr_w / 2, 30)
   love.graphics.setFont(default_font)
-
 end
 
 

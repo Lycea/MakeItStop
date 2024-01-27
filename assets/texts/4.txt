@@ -1,0 +1,33 @@
+-------------------------
+>>>text 10
+Well Since all buttons are gone, I think
+the button played a trick on us.
+It is hiding
+>>new_dialog
+We need to find it, and that fast
+Take this magnifying glass
+and hunt it down
+-------------------------
+>>>text 10
+This is not a button ...
+This is a letter, what is happening
+-------------------------
+>>>text 10
+Huh there are some slots what are these for ?
+-------------------------
+>>>text 10
+Oh the slots, I think you have to put the
+letters in them, find the correct order !
+-------------------------
+>>>text 10
+Well that was the last letter
+go on put them in.
+-------------------------
+>>>text 10
+Isn't that easy as it seems eh ?
+You need to place them quite precise or
+that will happen again.
+Also quick , or the time runs out and we are doomed!!!
+-------------------------
+>>>text 10
+You did it , see it transformed into a button again, nice !

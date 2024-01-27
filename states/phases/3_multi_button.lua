@@ -3,6 +3,9 @@ local phase =class_base:extend()
 
 local done = nil
 local btn_count = 20
+
+
+
 local function count_down_callback(obj_id)
   print("triggered cb")
   btn_count=btn_count -1

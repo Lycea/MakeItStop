@@ -1,0 +1,45 @@
+--------------------
+>>>text 10
+Wait what have you done ?
+>>new_dialog
+Why did you do that ?
+Have you any idea what that button was for ?
+>>new_dialog
+No you probaly don't ...
+>>>wait 2
+You just started the timer for the appocolypse!
+Everything will end if the timer runs out!
+*points at red bar on the screen*
+>>new_dialog
+We have to stop it.
+>>new_dialog
+No not we, YOU. It is all cause of YOU.
+Or Do you want the world to end ? Then just wait ...
+>>>wait 3
+>>new_dialog
+Lets find that damn off button...
+I think I saw it pop up just recently on the big screen
+---------------------
+>>>text 10
+Huh wait what is happening.
+Did it just move away ?
+Try again
+---------------------
+>>>text 10
+So that is really a thing ?
+Try again, maybe it is just a small glitch ...
+---------------------
+>>>text 10
+Ok that is enough...
+>>new_dialog
+Lets me quickly fix that button
+*moves away*
+>>wait 2
+>>new_dialog
+*rumbling sounds in the background*
+>>wait 2
+---------------------
+>>text 10
+Ok I'm back, it should work now, try one last time.
+Also I turned off the sirens, they were anoying
+You don't have to thank me for that (actually you do)

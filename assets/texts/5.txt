@@ -1,0 +1,31 @@
+-------------------------
+>>text 10
+Now go on click it !
+-------------------------
+>>text 10
+Wait nothing happened ?
+Did I miss something ?
+Do it again!
+-------------------------
+>>text 10
+NO!!!!
+Oh no!!!
+Now I see
+THE TIMER IS SPEEDING UP
+>>new_dialog
+Click it again, it will surely
+reverse the effect
+-------------------------
+>>text 10
+Well it did speed it up again...
+Guess that is going to be the end ...
+-------------------------
+>>text 10
+Did you really just click it again
+Are you serious ??????
+What is going on in your mind ????
+-------------------------
+>>text 10
+Goodybe cruel world ...
+...
+...

@@ -1,0 +1,21 @@
+--------------------
+>>>text 10
+Wait what ?
+>>new_dialog
+that was definitely not what I expected
+It was supposed to turn of the appocolypse
+Not spawn a huge amount of copys
+>>wait 2
+>>new_dialog
+Guess we now need to find the real one !
+Then this nightmare will end for sure.
+--------------------
+>>>text 10
+Yes they are disappearing!
+You are doing a great job
+go on.
+--------------------
+>>text 10
+Wait, was that the last one ?
+Why is the timer still ticking?
+Does anything in this damn facility even work how it should?
