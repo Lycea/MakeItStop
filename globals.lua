@@ -16,8 +16,11 @@ function globals.lib(name)
 end
 
 function globals.var(name)
-  return gvar[name]
+    return gvar[name]
 end
+lib("helper.timer", "timer")
 lib("helper.helpers","helper")
-lib("helper.SimpleUi.SimpleUI","ui")
+lib("helper.SimpleUi.SimpleUI", "ui")
+lib("helper.console","console")
+lib("helper.sceen_helper","sceen")
 return globals

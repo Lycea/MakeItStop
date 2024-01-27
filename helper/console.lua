@@ -18,42 +18,44 @@ function console.print(text)
     table.remove(buffer,buffer_max)
   end
   
-  table.insert(buffer,1,text)
+  table.insert(buffer,text)
 
 end
 
 function console.log(text)
- -- if #buffer>=buffer_max then
- --   table.remove(buffer,buffer_max)
- -- end
-  
-  while #buffer >= buffer_max do
-    table.remove(buffer,buffer_max)
-  end
-  
-  table.insert(buffer,1,text)
+  -- if #buffer>=buffer_max then
+  --   table.remove(buffer,buffer_max)
+  -- end
 
+  while #buffer >= buffer_max do
+    table.remove(buffer, buffer_max)
+  end
+
+  table.insert(buffer, text)
 end
 
-
-function console.setPos(x,y)
+function console.setPos(x, y)
   cons_x = x
   cons_y = y
 end
 
-function console.setSize(w,h)
+function console.setSize(w, h)
   cons_w = w
   cons_h = h
-  
-  --font magic to get a nice height and right buffer for it 
+
+  --font magic to get a nice height and right buffer for it
   f = love.graphics.getFont()
   local height = f:getHeight()
-  buffer_max = math.floor(h/height)
+  buffer_max = math.floor(h / height)
 end
 
-
 function console.draw()
-  love.graphics.rectangle("line",cons_x,cons_y,cons_w,cons_h)
+  love.graphics.setColor(0, 0, 0, 150)
+  love.graphics.rectangle("fill", cons_x, cons_y, cons_w, cons_h)
+  love.graphics.setColor(0, 0, 0, 255)
+  love.graphics.rectangle("line", cons_x, cons_y, cons_w, cons_h)
+
+  love.graphics.setColor(255, 255, 255, 255)
   love.graphics.print(table.concat(buffer,"\n"),cons_x+5,cons_y+5)
 end
 

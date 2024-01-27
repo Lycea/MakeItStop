@@ -30,8 +30,8 @@ function phase:startup()
   big_font = love.graphics.newFont(22)
   default_font = love.graphics.getFont()
 
-  top_btn = glib.ui.AddButton("top", scr_w / 2 - 40, scr_h / 2 - 20, 80, 40)
-  bot_btn = glib.ui.AddButton("bot", scr_w / 2 - 70, scr_h / 2 + 20, 160, 20)
+  top_btn = glib.ui.AddButton("", scr_w / 2 - 40, scr_h / 2 - 20, 80, 40)
+  bot_btn = glib.ui.AddButton("", scr_w / 2 - 70, scr_h / 2 + 20, 140, 20)
 
   table.insert(btns, top_btn)
   table.insert(btns, bot_btn)
@@ -53,8 +53,8 @@ function phase:draw()
   end
   love.graphics.setColor(255, 0, 0, num)
   love.graphics.setFont(big_font)
-  love.graphics.print("Push button", scr_w / 2 , 0)
-  love.graphics.print("   to start", scr_w / 2, 30)
+  love.graphics.print("Push button", scr_w / 2 - 75 , 30)
+  love.graphics.print("   to start", scr_w / 2 - 75, 60)
   love.graphics.setFont(default_font)
 end
 
