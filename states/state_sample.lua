@@ -44,10 +44,7 @@ function sample_state:new()
 end
 
 function sample_state:startup()
-  btn_1 = glib.ui.AddButton("test", 0, 0, 40, 40, 10)
-  glib.ui.SetVisibiliti(btn_1, false)
-  glib.ui.SetSpecialCallback(btn_1, function()
-  end)
+  mods[phase_ids[current_phase]]:startup()
 end
 
 function sample_state:draw()
