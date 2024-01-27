@@ -48,7 +48,7 @@ function love.load(args)
   
   scr_w,scr_h =love.graphics.getDimensions()
   --love.window.setMode(80*tile_size,50*tile_size)
-  ui.init()
+  glib.ui.init()
 
 
   game.load()
