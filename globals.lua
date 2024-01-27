@@ -18,6 +18,6 @@ end
 function globals.var(name)
   return gvar[name]
 end
-
+lib("helper.helpers","helper")
 lib("helper.SimpleUi.SimpleUI","ui")
 return globals

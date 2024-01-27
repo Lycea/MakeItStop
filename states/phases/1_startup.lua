@@ -15,7 +15,6 @@ local function start_click()
     end
 end
 
-
 local function hover()
   hover = true
 end
