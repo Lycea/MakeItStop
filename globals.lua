@@ -19,8 +19,12 @@ function globals.var(name)
     return gvar[name]
 end
 lib("helper.timer", "timer")
-lib("helper.helpers","helper")
+lib("helper.helpers", "helper")
 lib("helper.SimpleUi.SimpleUI", "ui")
-lib("helper.console","console")
-lib("helper.sceen_helper","sceen")
+lib("helper.console", "console")
+lib("helper.sceen_helper", "sceen")
+
+gvar.background_img = nil
+gvar.button_image = nil
+gvar.off_button_image = nil
 return globals
