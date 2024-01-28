@@ -15,23 +15,24 @@ function line(txt)
 end
 
 function wait(sec)
-  return {t="wait", time=sec}
+  return { t = "wait", time = sec }
 end
 
 function clear()
-  return {t="clear"}
+  return { t = "clear" }
 end
 
-
 function sceen:load_file(file_path)
-  local  fi_handle = io.open(file_path, "r")
+  --local fi_handle = io.open(file_path, "r")
+  local fi_handle =  love.filesystem.read(file_path)
+
   local dialoges ={}
   local tmp_dialog = {}
 
   self.dialogues = {}
 
 
-  for line_ in fi_handle:lines("*l") do
+  for line_ in love.filesystem.lines(file_path) do
     if string.match(line_,"^-*$") ~= nil then
       if #tmp_dialog >0 then
         table.insert(dialoges, tmp_dialog)
