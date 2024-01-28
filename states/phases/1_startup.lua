@@ -30,6 +30,11 @@ end
 function phase:startup()
 
   btn_img = love.graphics.newImage("assets/button_a.png")
+
+  gvar.background_img = love.graphics.newImage("assets/facility.png")
+  gvar.button_image = love.graphics.newImage("assets/button_pressed.png")
+  gvar.off_button_image = love.graphics.newImage("assets/btn_off1.png")
+
   print("sizes:", scr_w, scr_h)
   big_font = love.graphics.newFont(22)
   default_font = love.graphics.getFont()

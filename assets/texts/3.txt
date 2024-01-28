@@ -13,9 +13,14 @@ Then this nightmare will end for sure.
 >>>text 10
 Yes they are disappearing!
 You are doing a great job
-go on.
+go on, click away !.
 --------------------
->>text 10
-Wait, was that the last one ?
-Why is the timer still ticking?
-Does anything in this damn facility even work how it should?
+>>>text 10
+Go go go,
+buttons , clicking
+you know the drill
+--------------------
+>>>text 10
+One to go!
+lets click it !
+--------------------
