@@ -35,7 +35,7 @@ end
 -- end
 
 function love.load(args)
-  
+  love.setDeprecationOutput(false)
   for idx, arg in pairs(args) do
       if arg == "-debug" then
         debuger = require("mobdebug")

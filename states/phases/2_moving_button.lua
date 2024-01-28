@@ -7,6 +7,8 @@ local move_count = 0
 
 local in_dial = false
 
+local btn_img = nil
+
 
 local function next_phase()
   if in_dial then
@@ -17,6 +19,7 @@ local function next_phase()
   done = true
 end
 
+
 function move_btn()
   if in_dial then
     return
@@ -24,7 +27,8 @@ function move_btn()
 
   
   btn_obj = glib.ui.GetObject(btn)
-  btn_obj.x = love.math.random(0, scr_w)
+
+  btn_obj.x = love.math.random(40, scr_w-100)
   btn_obj.y = love.math.random(0, scr_h / 2)
   move_count= move_count+1
   glib.helper.do_when(move_count, 15, function()
@@ -44,13 +48,12 @@ end
 
 function spawn_off_button()
   btn = glib.ui.AddButton("stop it",
-    love.math.random(40, scr_w - 40),
+    love.math.random(40, scr_w - 100),
     love.math.random(40, scr_h / 2 - 20),
     60, 30)
-  
+
   glib.ui.SetSpecialCallback(btn, move_btn)
 end
-
 
 local event_stack = {}
 
@@ -59,13 +62,13 @@ function phase:new()
   print("initialised move screen!!")
 
   glib.sceen:load_file("assets/texts/2.txt")
-
-  end
+end
 
 local back_image = nil
 
 function phase:startup()
   back_image = love.graphics.newImage("assets/facility.png")
+  btn_img = love.graphics.newImage("assets/button_pressed.png")
 
   glib.sceen:start(1)
 
@@ -86,12 +89,15 @@ function phase:draw()
     end
 
     love.graphics.draw(back_image, 0, 0)
+    love.graphics.draw(btn_img, scr_w / 2 - 70, scr_h / 2 + 60)
 
     love.graphics.setColor(255, 0, 0, num)
     love.graphics.rectangle("fill", 0, 0, scr_w, scr_h)
   end
 
-  love.graphics.setColor(255,255,255)
+  love.graphics.setColor(255, 255, 255)
+
+
   glib.sceen:show()
 end
 
