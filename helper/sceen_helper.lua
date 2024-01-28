@@ -26,8 +26,10 @@ end
 function sceen:load_file(file_path)
   local  fi_handle = io.open(file_path, "r")
   local dialoges ={}
-
   local tmp_dialog = {}
+
+  self.dialogues = {}
+
 
   for line_ in fi_handle:lines("*l") do
     if string.match(line_,"^-*$") ~= nil then
