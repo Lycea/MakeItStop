@@ -1,3 +1,8 @@
+--------------------
+>>text 10
+Wait, was that the last one ?
+Why is the timer still ticking?
+Does anything in this damn facility even work how it should?
 -------------------------
 >>>text 10
 Well Since all buttons are gone, I think
@@ -31,3 +36,4 @@ Also quick , or the time runs out and we are doomed!!!
 -------------------------
 >>>text 10
 You did it , see it transformed into a button again, nice !
+-------------------------

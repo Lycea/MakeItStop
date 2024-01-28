@@ -1,13 +1,14 @@
 -------------------------
->>text 10
+>>text 10 1
+Ah there is that button.
 Now go on click it !
 -------------------------
->>text 10
+>>text 10 2
 Wait nothing happened ?
 Did I miss something ?
 Do it again!
 -------------------------
->>text 10
+>>text 10 3
 NO!!!!
 Oh no!!!
 Now I see
@@ -16,36 +17,37 @@ THE TIMER IS SPEEDING UP
 Click it again, it will surely
 reverse the effect
 -------------------------
->>text 10
+>>text 10 4
 Well it did speed it up again...
 Guess that is going to be the end ...
 -------------------------
->>text 10
+>>text 10 5
 Did you really just click it again
 Are you serious ??????
 What is going on in your mind ????
 -------------------------
->>text 10
+>>text 10 6
 Goodybe cruel world ...
 ...
 ...
 -------------------------
->>text 10
+>>text 10 7
     *brrrrrrrr*
     *brrrrrrrr*
     *brrrrrrrr*
     *clock alarm sounds*
-
 *being confused about the sound*
 *smashes alarm clock*
 *opens eyes*
-
+...
+...
 Wait the world did not end ?
 Seems what just happened was just a bad dream ...
-
 Or was it ?
-
-
+   ----- -------
+   - THE END ? -
+   ----- -------
+>>wait 5
 -------------------------
 
 

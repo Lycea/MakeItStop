@@ -7,7 +7,6 @@ local move_count = 0
 
 local in_dial = false
 
-local btn_img = nil
 local btn_pos ={}
 
 local function next_phase()
@@ -57,25 +56,18 @@ function spawn_off_button()
   glib.ui.SetSpecialCallback(btn, move_btn)
   btn_obj = glib.ui.GetObject(btn)
 
-  btn_pos ={btn_obj.x,btn_obj.y}
+  btn_pos = { btn_obj.x, btn_obj.y }
 end
-
-local event_stack = {}
 
 function phase:new()
   self.id = 2
   print("initialised move screen!!")
-
-  glib.sceen:load_file("assets/texts/2.txt")
 end
 
 local back_image = nil
 
 function phase:startup()
-  gvar.background_img = love.graphics.newImage("assets/facility.png")
-  gvar.button_image = love.graphics.newImage("assets/button_pressed.png")
-  gvar.off_button_image = love.graphics.newImage("assets/btn_off1.png")
-
+  glib.sceen:load_file("assets/texts/2.txt")
   glib.sceen:start(1)
 
   spawn_off_button()
@@ -94,10 +86,11 @@ function phase:draw()
       num_change = 0.2
     end
 
-    love.graphics.draw(gvar.background_img, 0, 0)
+    love.graphics.draw(gvar.background_img, 0, 0) 
+    glib.helper.draw_countdown(90)
     love.graphics.draw(gvar.button_image, scr_w / 2 - 70, scr_h / 2 + 60)
 
-    love.graphics.draw(gvar.off_button_image,btn_pos[1],btn_pos[2])
+    love.graphics.draw(gvar.off_button_image, btn_pos[1], btn_pos[2])
 
     love.graphics.setColor(255, 0, 0, num)
     love.graphics.rectangle("fill", 0, 0, scr_w, scr_h)

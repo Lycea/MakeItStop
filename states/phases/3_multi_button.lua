@@ -50,11 +50,11 @@ local function spawn_rnd_button()
 
   local btn_obj = glib.ui.GetObject(btn)
 
-  btn_pos_list[btn]={
-                 id= btn,
-                 x =btn_obj.x,
-                 y =btn_obj.y,
-                 draw = true
+  btn_pos_list[btn] = {
+    id = btn,
+    x = btn_obj.x,
+    y = btn_obj.y,
+    draw = true
   }
 end
 
@@ -65,20 +65,18 @@ local function slow_spawn_btn()
 end
 
 function phase:new()
-  self.id = 2
+  self.id = 3
   print("initialised multi button sceene!!")
-
-  glib.sceen:load_file("assets/texts/3.txt")
 end
 
-
-
 function phase:startup()
+  glib.sceen:load_file("assets/texts/3.txt")
   glib.sceen:start(1)
 end
 
 function phase:draw()
   love.graphics.draw(gvar.background_img, 0, 0)
+  glib.helper.draw_countdown(90)
   love.graphics.draw(gvar.button_image, scr_w / 2 - 70, scr_h / 2 + 60)
 
   for _, btn_info in pairs(btn_pos_list) do
