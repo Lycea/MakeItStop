@@ -44,9 +44,7 @@ Goodybe cruel world ...
 Wait the world did not end ?
 Seems what just happened was just a bad dream ...
 Or was it ?
-   ----- -------
    - THE END ? -
-   ----- -------
 >>wait 5
 -------------------------
 

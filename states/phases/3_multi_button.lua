@@ -28,12 +28,12 @@ local function count_down_callback(obj_id)
   elseif btn_count == 15 then
     print("trigger s3")
     glib.sceen:start(3)
-  elseif btn_count == 3 then
+  elseif btn_count == 4 then
     print("trigger s4")
     glib.sceen:start(4)
   end
 
-  if btn_count == 2 then
+  if btn_count == 3 then
     done = true
   end
 end
